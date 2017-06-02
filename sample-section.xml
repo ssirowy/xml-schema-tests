@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///Users/ssirowy/Zyante/xml/zybook-section/schema.xsd">
+<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
   <title>Introduction to Programming</title>
   <contentResource xsi:type="TextResource">
     Programming is <bold>defined</bold> as <italic>tinkering</italic> with <bold>stuff</bold>.
