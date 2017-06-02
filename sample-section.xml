@@ -32,6 +32,11 @@
       </choice>
     </question>
   </contentResource>
+   <contentResource xsi:type="CommentResource">
+    <name>Scott Sirowy</name>
+    <timestamp>2017-05-30T09:00:00</timestamp>
+    <comment>Sample comment</comment>
+  </contentResource>
   <contentResource xsi:type="ImageResource">
     <url>https://goo.gl/88nu4w</url>
   </contentResource>

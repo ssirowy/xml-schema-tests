@@ -47,6 +47,19 @@
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
+  
+    <!-- Comment  resource type. -->
+  <xs:complexType name="CommentResource">
+    <xs:complexContent>
+      <xs:extension base="ContentResource">
+        <xs:sequence>
+          <xs:element name="name" type="xs:string"/>
+          <xs:element name="timestamp" type="xs:dateTime"/>
+          <xs:element name="comment" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
 
   <!-- Type for a question -->
   <xs:complexType name="MultipleChoiceQuestion">
@@ -64,7 +77,7 @@
       <xs:element name="explanation" type="xs:string"/>
     </xs:sequence>
   </xs:complexType>
-
+  
   <!-- XML has a section as the root element -->
   <xs:element name="section" type="Section"/>
 
