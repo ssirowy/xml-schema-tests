@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Section type. A section has a title and many content resources -->
+  <xs:complexType name="Section">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="contentResource" type="ContentResource" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Content resource type (Abstract). -->
+  <xs:complexType abstract="true" name="ContentResource">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <!-- Text content resource type. -->
+  <xs:complexType name="TextResource" mixed="true">
+    <xs:complexContent>
+      <xs:extension base="ContentResource">
+        <xs:choice maxOccurs="unbounded">
+          <xs:element name="bold" type="xs:string"/>
+          <xs:element name="italic" type="xs:string"/>
+        </xs:choice>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Image content resource type. -->
+  <xs:complexType name="ImageResource">
+    <xs:complexContent>
+      <xs:extension base="ContentResource">
+        <xs:sequence>
+          <xs:element name="url" type="xs:anyURI"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Multiple choice question resource type. -->
+  <xs:complexType name="MultipleChoiceResource">
+    <xs:complexContent>
+      <xs:extension base="ContentResource">
+        <xs:sequence>
+          <xs:element name="question" type="MultipleChoiceQuestion" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Type for a question -->
+  <xs:complexType name="MultipleChoiceQuestion">
+    <xs:sequence>
+      <xs:element name="text" type="xs:string"/>
+      <xs:element name="choice" type="QuestionChoice" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- Type for a question choice -->
+  <xs:complexType name="QuestionChoice">
+    <xs:sequence>
+      <xs:element name="correct" type="xs:boolean"/>
+      <xs:element name="label" type="xs:string"/>
+      <xs:element name="explanation" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- XML has a section as the root element -->
+  <xs:element name="section" type="Section"/>
+
+</xs:schema>

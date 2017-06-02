@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:///Users/ssirowy/Zyante/xml/zybook-section/schema.xsd">
+  <title>Introduction to Programming</title>
+  <contentResource xsi:type="TextResource">
+    Programming is <bold>defined</bold> as <italic>tinkering</italic> with <bold>stuff</bold>.
+  </contentResource>
+  <contentResource xsi:type="MultipleChoiceResource">
+    <question>
+      <text>What is the approximate shape of the planet Earth?</text>
+      <choice>
+        <correct>false</correct>
+        <label>Flat</label>
+        <explanation>The world  is not flat...  Are u sure?</explanation>
+      </choice>
+      <choice>
+        <correct>false</correct>
+        <label>Round</label>
+        <explanation>The world is round.</explanation>
+      </choice>
+    </question>
+    <question>
+      <text>What is 2 + 2?</text>
+      <choice>
+        <correct>true</correct>
+        <label>4</label>
+        <explanation>Yeah it's 4.</explanation>
+      </choice>
+      <choice>
+        <correct>false</correct>
+        <label>5</label>
+        <explanation>Nope. Try using your fingers to count.</explanation>
+      </choice>
+    </question>
+  </contentResource>
+  <contentResource xsi:type="ImageResource">
+    <url>https://goo.gl/88nu4w</url>
+  </contentResource>
+</section>
