@@ -3,11 +3,11 @@
 
   <!-- Section type. A section has a set of properties -->
   <xs:complexType name="Section">
-    <xs:sequence>
+    <xs:all>
       <xs:element name="title" type="xs:string"/>
       <xs:element name="zypInfos" type="ZypInfos" minOccurs="0"/>
       <xs:element name="contentResources" type="ContentResources" />
-    </xs:sequence>
+    </xs:all>
   </xs:complexType>
   
   <!-- Content resources array type. --> 
@@ -26,11 +26,11 @@
   
   <!-- zypInfo type -->
     <xs:complexType name="ZypInfo">
-        <xs:sequence>
+        <xs:all>
           <xs:element name="name" type="xs:string"/>
           <xs:element name="timestamp" type="xs:dateTime"/>
-          <xs:element name="comment" type="xs:string"/>
-        </xs:sequence>
+          <xs:element name="text" type="xs:string"/>
+        </xs:all>
   </xs:complexType>
 
   <!-- Content resource type (Abstract). -->
@@ -76,11 +76,11 @@
   <xs:complexType name="CommentResource">
     <xs:complexContent>
       <xs:extension base="ContentResource">
-        <xs:sequence>
+        <xs:all>
           <xs:element name="name" type="xs:string"/>
           <xs:element name="timestamp" type="xs:dateTime"/>
           <xs:element name="comment" type="xs:string"/>
-        </xs:sequence>
+        </xs:all>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
