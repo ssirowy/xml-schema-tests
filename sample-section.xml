@@ -1,7 +1,15 @@
 <?xml version="1.0"?>
 <section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
   <title>Introduction to Programming</title>
-  <contentResource xsi:type="TextResource">
+  <zypInfos>
+      <zypInfo>
+          <name>Scott Sirowy</name>
+          <timestamp>2017-06-01T09:00:00</timestamp>
+          <comment>Worked on schema for 5 minutes</comment>
+      </zypInfo>
+  </zypInfos>
+ <contentResources>
+      <contentResource xsi:type="TextResource">
     Programming is <bold>defined</bold> as <italic>tinkering</italic> with <bold>stuff</bold>.
   </contentResource>
   <contentResource xsi:type="MultipleChoiceResource">
@@ -40,4 +48,5 @@
   <contentResource xsi:type="ImageResource">
     <url>https://goo.gl/88nu4w</url>
   </contentResource>
+</contentResources>
 </section>
