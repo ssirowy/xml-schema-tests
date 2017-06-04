@@ -1,8 +1,7 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<!-- Custom types -->
-
+<!-- All supported languages, defined as an attribute -->
 <xs:attribute name="language">
     <xs:simpleType>
         <xs:restriction base="xs:string">
@@ -14,6 +13,7 @@
     </xs:simpleType>
 </xs:attribute>
 
+<!-- A code type for specifying a code block --> 
 <xs:complexType name="codetype">
     <xs:simpleContent>
       <xs:extension base="xs:string">
@@ -21,11 +21,12 @@
       </xs:extension>
     </xs:simpleContent>
  </xs:complexType>
-
-<!-- Support marks for mixed content text regions -->
-<xs:element name="code" type="codetype" />
-<xs:element name="bold" type="xs:string"/>
-<xs:element name="italics" type="xs:string"/>
+ 
+ <xs:complexType name="definitiontype" mixed="true">
+     <xs:sequence>
+         <xs:element ref="term"/>
+      </xs:sequence>
+ </xs:complexType>
 
   <!-- Section type. A section has a set of properties -->
   <xs:complexType name="Section">
@@ -37,14 +38,14 @@
   </xs:complexType>
   
   <!-- Content resources array type. --> 
-    <xs:complexType name="ContentResources">
-    <xs:sequence>
-      <xs:element name="contentResource" type="ContentResource" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
+  <xs:complexType name="ContentResources">
+      <xs:sequence>
+          <xs:element name="contentResource" type="ContentResource" maxOccurs="unbounded"/>
+      </xs:sequence>
+ </xs:complexType>
   
-  <!-- Array of zypInfos array type -->
-   <xs:complexType name="ZypInfos">
+ <!-- Array of zypInfos array type -->
+ <xs:complexType name="ZypInfos">
     <xs:sequence>
       <xs:element name="zypInfo" type="ZypInfo" minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
@@ -64,14 +65,18 @@
     <xs:sequence/>
   </xs:complexType>
 
+  <!-- Support marks for mixed content text regions -->
+<xs:element name="code" type="codetype" />
+<xs:element name="term" type="xs:string"/>
+<xs:element name='definition' type='definitiontype' />
+
   <!-- Text content resource type. -->
   <xs:complexType name="TextResource" mixed="true">
     <xs:complexContent>
       <xs:extension base="ContentResource">
         <xs:choice maxOccurs="unbounded">
-          <xs:element ref="bold"/>
           <xs:element ref="code"/>
-          <xs:element ref="italics"/>
+          <xs:element ref="definition"/>
         </xs:choice>
       </xs:extension>
     </xs:complexContent>
