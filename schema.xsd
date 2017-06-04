@@ -1,6 +1,32 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+<!-- Custom types -->
+
+<xs:attribute name="language">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="cpp"/>
+            <xs:enumeration value="c"/>
+            <xs:enumeration value="java"/>
+            <xs:enumeration value="python"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:attribute>
+
+<xs:complexType name="codetype">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="language" use="required" />
+      </xs:extension>
+    </xs:simpleContent>
+ </xs:complexType>
+
+<!-- Support marks for mixed content text regions -->
+<xs:element name="code" type="codetype" />
+<xs:element name="bold" type="xs:string"/>
+<xs:element name="italics" type="xs:string"/>
+
   <!-- Section type. A section has a set of properties -->
   <xs:complexType name="Section">
     <xs:all>
@@ -43,8 +69,9 @@
     <xs:complexContent>
       <xs:extension base="ContentResource">
         <xs:choice maxOccurs="unbounded">
-          <xs:element name="bold" type="xs:string"/>
-          <xs:element name="italic" type="xs:string"/>
+          <xs:element ref="bold"/>
+          <xs:element ref="code"/>
+          <xs:element ref="italics"/>
         </xs:choice>
       </xs:extension>
     </xs:complexContent>
