@@ -16,6 +16,11 @@
           <timestamp>2017-06-06T09:00:00</timestamp>
           <text>Worked on demo styling</text>
       </zypInfo>
+            <zypInfo>
+          <name>Scott Sirowy</name>
+          <timestamp>2017-06-06T09:00:00</timestamp>
+          <text>Got comments to work</text>
+      </zypInfo>
   </zypInfos>
    <title>Introduction to Programming Test</title>
  <contentResources>
@@ -25,10 +30,20 @@
      <definition><term>Scott</term> is defined as tinkering with stuff </definition>
 
      Here is yet another line of text. <definition>Here is another <term>definition</term></definition>
+     
+     <definition> <term>Skiiing</term> is a winter sport</definition>
 </contentResource>
+<contentResource xsi:type="CommentResource" guid="34567789">
+    <name>Scott Sirowy</name>
+    <timestamp>2017-05-30T09:00:00</timestamp>
+    <comment>Figure out paragraph spacing</comment>
+  </contentResource>
+   <contentResource xsi:type="ImageResource" guid="56712367">
+    <url>https://s-media-cache-ak0.pinimg.com/originals/b5/ba/8e/b5ba8e4456479bd1cde17e77f8a12fc8.jpg</url>
+  </contentResource>
   <contentResource xsi:type="CodeResource" guid="12345679" language="cpp">
       <code>
-          #include &lt;iostream&gt;
+ #include &lt;iostream&gt;
 using namespace std;
 
 int main() {
@@ -70,7 +85,7 @@ int main() {
     <comment>Sample comment</comment>
   </contentResource>
   <contentResource xsi:type="ImageResource" guid="56712367">
-    <url>https://zyanteblog.files.wordpress.com/2014/10/dev_team.jpg</url>
+    <url>http://www.cs.ucr.edu/~vahid/vahid06.jpg</url>
   </contentResource>
 </contentResources>
 </section>
