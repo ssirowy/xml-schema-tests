@@ -14,11 +14,20 @@
   </zypInfos>
    <title>Introduction to Programming</title>
  <contentResources>
-      <contentResource xsi:type="TextResource">
+      <contentResource xsi:type="TextResource" guid="12345678">
     <definition><term>Programming</term> is defined as tinkering with stuff </definition>
-    Here is some sample code <code language="cpp">// Sample comment</code>
 </contentResource>
-  <contentResource xsi:type="MultipleChoiceResource">
+  <contentResource xsi:type="CodeResource" guid="12345679" language="cpp">
+      <code>
+          #include iostream
+         using namespace std;
+          
+         int main() {
+              cout something;
+         }
+      </code>
+  </contentResource>
+  <contentResource xsi:type="MultipleChoiceResource" guid="22345679">
     <question>
       <text>What is the approximate shape of the planet Earth?</text>
       <choice>
@@ -46,12 +55,12 @@
       </choice>
     </question>
   </contentResource>
-   <contentResource xsi:type="CommentResource">
+   <contentResource xsi:type="CommentResource" guid="34567789">
     <name>Scott Sirowy</name>
     <timestamp>2017-05-30T09:00:00</timestamp>
     <comment>Sample comment</comment>
   </contentResource>
-  <contentResource xsi:type="ImageResource">
+  <contentResource xsi:type="ImageResource" guid="56712367">
     <url>https://goo.gl/88nu4w</url>
   </contentResource>
 </contentResources>
