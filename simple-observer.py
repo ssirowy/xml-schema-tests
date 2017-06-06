@@ -57,7 +57,7 @@ class ZyBooksConvention(XMLData):
 
             # Append root text
             if root_text:
-                value[mixed_content_key].append({self.text_content: root_text})
+                value[mixed_content_key].append({self.text_content: root.text})
 
             # Append children and tails
             for child in children:
@@ -65,7 +65,7 @@ class ZyBooksConvention(XMLData):
 
                 child_tail = child.tail.strip() if child.tail is not None else None
                 if child_tail:
-                    value[mixed_content_key].append({self.text_content: child_tail})
+                    value[mixed_content_key].append({self.text_content: child.tail})
 
         return self.dict([(root.tag, value)])
 
@@ -73,10 +73,11 @@ xmljson_convention = ZyBooksConvention()
 
 class XMLObserver(FileSystemEventHandler):
 
-    def __init__(self, path='.'):
+    def __init__(self, path='.', write_path='dump.txt'):
         super(XMLObserver, self).__init__()
 
         self.path = path
+        self.write_path = write_path
 
     def dispatch(self, event):
 
@@ -96,16 +97,19 @@ class XMLObserver(FileSystemEventHandler):
         try:
             root = etree.fromstring(sample_section, parser)
 
-            print json.dumps(xmljson_convention.data(root))
+            with open(self.write_path, 'w') as output_file:
+                output_file.write('export default function fetchSectionData() { return %s; }' % json.dumps(xmljson_convention.data(root)))
         except etree.XMLSyntaxError, e:
             print 'ERROR'
 
 if __name__ == "__main__":
     path = sys.argv[1] if len(sys.argv) > 1 else '.'
 
+    write_path = sys.argv[2] if len(sys.argv) > 1 else 'dump.txt'
+
     print "Watching %s for changes" % path
 
-    event_handler = XMLObserver(path = path)
+    event_handler = XMLObserver(path = path, write_path = write_path)
     observer = Observer()
     observer.schedule(event_handler, path, recursive=True)
     observer.start()

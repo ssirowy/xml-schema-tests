@@ -11,20 +11,29 @@
           <timestamp>2017-06-01T09:00:00</timestamp>
           <text>Worked on schema some more</text>
       </zypInfo>
+      <zypInfo>
+          <name>Scott Sirowy</name>
+          <timestamp>2017-06-06T09:00:00</timestamp>
+          <text>Worked on demo styling</text>
+      </zypInfo>
   </zypInfos>
-   <title>Introduction to Programming</title>
+   <title>Introduction to Programming Test</title>
  <contentResources>
-      <contentResource xsi:type="TextResource" guid="12345678">
-    <definition><term>Programming</term> is defined as tinkering with stuff </definition>
+   <contentResource xsi:type="TextResource" guid="12345678">
+     Here is a line of text, followed by a definition.
+
+     <definition><term>Scott</term> is defined as tinkering with stuff </definition>
+
+     Here is yet another line of text. <definition>Here is another <term>definition</term></definition>
 </contentResource>
   <contentResource xsi:type="CodeResource" guid="12345679" language="cpp">
       <code>
-          #include iostream
-         using namespace std;
-          
-         int main() {
-              cout something;
-         }
+          #include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Scott was here";
+}
       </code>
   </contentResource>
   <contentResource xsi:type="MultipleChoiceResource" guid="22345679">
@@ -61,7 +70,7 @@
     <comment>Sample comment</comment>
   </contentResource>
   <contentResource xsi:type="ImageResource" guid="56712367">
-    <url>https://goo.gl/88nu4w</url>
+    <url>https://zyanteblog.files.wordpress.com/2014/10/dev_team.jpg</url>
   </contentResource>
 </contentResources>
 </section>
