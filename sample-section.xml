@@ -14,10 +14,11 @@
   </zypInfos>
    <title>Introduction to Programming</title>
  <contentResources>
-      <contentResource xsi:type="TextResource">
+  <contentResource xsi:type="TextResource">
     <definition><term>Programming</term> is defined as tinkering with stuff </definition>
+
     Here is some sample code <code language="cpp">// Sample comment</code>
-</contentResource>
+  </contentResource>
   <contentResource xsi:type="MultipleChoiceResource">
     <question>
       <text>What is the approximate shape of the planet Earth?</text>

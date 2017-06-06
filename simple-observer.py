@@ -57,7 +57,7 @@ class ZyBooksConvention(XMLData):
 
             # Append root text
             if root_text:
-                value[mixed_content_key].append({self.text_content: root_text})
+                value[mixed_content_key].append({self.text_content: root.text})
 
             # Append children and tails
             for child in children:
@@ -65,7 +65,7 @@ class ZyBooksConvention(XMLData):
 
                 child_tail = child.tail.strip() if child.tail is not None else None
                 if child_tail:
-                    value[mixed_content_key].append({self.text_content: child_tail})
+                    value[mixed_content_key].append({self.text_content: child.tail})
 
         return self.dict([(root.tag, value)])
 
