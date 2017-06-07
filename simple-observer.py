@@ -73,7 +73,7 @@ xmljson_convention = ZyBooksConvention()
 
 class XMLObserver(FileSystemEventHandler):
 
-    def __init__(self, path='.', write_path='dump.txt'):
+    def __init__(self, path='.', write_path=None):
         super(XMLObserver, self).__init__()
 
         self.path = path
@@ -97,15 +97,20 @@ class XMLObserver(FileSystemEventHandler):
         try:
             root = etree.fromstring(sample_section, parser)
 
-            with open(self.write_path, 'w') as output_file:
-                output_file.write('export default function fetchSectionData() { return %s; }' % json.dumps(xmljson_convention.data(root)))
+            output_str = 'export default function fetchSectionData() { return [ %s ]; }' % json.dumps(xmljson_convention.data(root)['section'])
+            if self.write_path:
+                with open(self.write_path, 'w') as output_file:
+                    output_file.write(output_str)
+
+
+            print output_str
         except etree.XMLSyntaxError, e:
             print 'ERROR'
 
 if __name__ == "__main__":
     path = sys.argv[1] if len(sys.argv) > 1 else '.'
 
-    write_path = sys.argv[2] if len(sys.argv) > 1 else 'dump.txt'
+    write_path = sys.argv[2] if len(sys.argv) > 2 else None
 
     print "Watching %s for changes" % path
 

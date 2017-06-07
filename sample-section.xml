@@ -22,26 +22,26 @@
           <text>Got comments to work</text>
       </zypInfo>
   </zypInfos>
-   <title>Introduction to Programming Test</title>
+   <title>Alex demo</title>
  <contentResources>
    <contentResource xsi:type="TextResource" guid="12345678">
      Here is a line of text, followed by a definition.
 
-     <definition><term>Scott</term> is defined as tinkering with stuff </definition>
+     <definition><term>Programming</term> is defined as tinkering with stuff </definition>
 
      Here is yet another line of text. <definition>Here is another <term>definition</term></definition>
      
      <definition> <term>Skiiing</term> is a winter sport</definition>
 </contentResource>
-<contentResource xsi:type="CommentResource" guid="34567789">
+<contentResource xsi:type="CommentResource" guid="34467789">
     <name>Scott Sirowy</name>
     <timestamp>2017-05-30T09:00:00</timestamp>
     <comment>Figure out paragraph spacing</comment>
   </contentResource>
-   <contentResource xsi:type="ImageResource" guid="56712367">
+   <contentResource xsi:type="ImageResource" guid="5e712367">
     <url>https://s-media-cache-ak0.pinimg.com/originals/b5/ba/8e/b5ba8e4456479bd1cde17e77f8a12fc8.jpg</url>
   </contentResource>
-  <contentResource xsi:type="CodeResource" guid="12345679" language="cpp">
+  <contentResource xsi:type="CodeResource" guid="12345678" language="cpp">
       <code>
  #include &lt;iostream&gt;
 using namespace std;
