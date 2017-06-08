@@ -63,8 +63,7 @@ class ZyBooksConvention(XMLData):
             for child in children:
                 value[mixed_content_key].append(self.data(child))
 
-                child_tail = child.tail.strip() if child.tail is not None else None
-                if child_tail:
+                if child.tail:
                     value[mixed_content_key].append({self.text_content: child.tail})
 
         return self.dict([(root.tag, value)])
