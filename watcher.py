@@ -1,6 +1,7 @@
 import sys
 import os
 import time
+import re
 from watchdog.observers import Observer
 from watchdog.events import LoggingEventHandler
 from watchdog.events import FileSystemEventHandler
@@ -115,6 +116,24 @@ class XMLObserver(FileSystemEventHandler):
 
         return sections
 
+    def set_code_from_files(self, section_json, section_filename):
+        crs_json = section_json['contentResources']['contentResource']
+        crs_list = crs_json if type(crs_json) is list else [ crs_json ]
+
+        for cr in crs_list:
+            cr_type = cr['@{http://www.w3.org/2001/XMLSchema-instance}type']
+
+            if cr_type == 'CodeResource':
+                filename = cr['@file']
+                directory_path = os.path.dirname(section_filename)
+                file_path = os.path.join(directory_path, filename)
+                code = None
+
+                with open(file_path) as code_file:
+                    code = code_file.read()
+
+                cr['code'] = {'$': code if code else ''}
+
     def parse_section(self, xml_filename):
         '''
         Validates a section's xml file and returns a JSON representation.
@@ -140,7 +159,9 @@ class XMLObserver(FileSystemEventHandler):
                 root = etree.fromstring(sample_section, parser)
                 json_section = xmljson_convention.data(root)['section']
 
-                #print(json.dumps(json_section))
+                self.set_code_from_files(json_section, section_file_name)
+
+                print(json.dumps(json_section))
             except etree.XMLSyntaxError, e:
                 print 'ERROR parsing section file: %s' %xml_filename
                 print e
