@@ -17,16 +17,7 @@
     <contentResource xsi:type="TextResource" guid="11345678">
       Below is a simple first C++ program.
     </contentResource>
-    <contentResource xsi:type="CodeResource" guid="12345678" language="cpp">
-      <code>
- #include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    cout &lt;&lt; "Scott was here";
-}
-      </code>
-    </contentResource>
+    <contentResource xsi:type="CodeResource" guid="12345678" language="cpp" file="main.cpp"/>
     <contentResource xsi:type="CommentResource" guid="13467789">
       <name>Adrian Lizarraga</name>
       <timestamp>2017-06-07T09:00:00</timestamp>
