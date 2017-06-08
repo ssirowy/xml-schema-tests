@@ -11,6 +11,11 @@
       <timestamp>2017-06-07T09:02:00</timestamp>
       <text>Added image</text>
     </zypInfo>
+        <zypInfo>
+      <name>Scott Sirowy</name>
+      <timestamp>2017-06-08T09:02:00</timestamp>
+      <text>Undid all of Adrians work. Copied zyBook section basics</text>
+    </zypInfo>
   </zypInfos>
   <title>A first program</title>
   <contentResources>
