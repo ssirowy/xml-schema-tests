@@ -25,7 +25,7 @@
    <title>Alex demo</title>
  <contentResources>
    <contentResource xsi:type="TextResource" guid="12345678">
-     Here is a line of text, followed by a definition.
+     Here is a line of text, followed by a defn.
 
      <definition><term>Programming</term> is defined as tinkering with stuff </definition>
 
