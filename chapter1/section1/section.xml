@@ -33,20 +33,11 @@
   </contentResource>
   <contentResource xsi:type="TextResource" guid="12345678">
     <definition><term>Code</term> can be defined easily using new setup.</definition>.   See below for an accessible code block.  Note this code
-    was defined in its own file, which could even allow us to compile such code before ever processing to ensure the code can actually run. 
+    was defined in its own file, which could even allow us to compile such code before ever processing to ensure the code can actually run.
     
     Newlines are respected in source, which helps to remove the need for tags like br
     </contentResource>
-  <contentResource xsi:type="CodeResource" guid="12345678" language="cpp">
-      <code>
- #include &lt;iostream&gt;
-using namespace std;
-
-int main() {
-    cout &lt;&lt; "Scott was here";
-}
-      </code>
-  </contentResource>
+  <contentResource xsi:type="CodeResource" guid="12345678" language="cpp" file="main.cpp"/>
   <contentResource xsi:type="MultipleChoiceResource" guid="22345679">
     <question>
       <text>What is the approximate shape of the planet Earth?</text>
