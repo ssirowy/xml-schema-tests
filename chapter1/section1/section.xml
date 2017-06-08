@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../section-schema.xsd">
   <zypInfos>
       <zypInfo>
           <name>Scott Sirowy</name>
@@ -40,6 +40,7 @@
   </contentResource>
    <contentResource xsi:type="ImageResource" guid="5e712367">
     <url>https://s-media-cache-ak0.pinimg.com/originals/b5/ba/8e/b5ba8e4456479bd1cde17e77f8a12fc8.jpg</url>
+    <caption>Test caption</caption>
   </contentResource>
   <contentResource xsi:type="CodeResource" guid="12345678" language="cpp">
       <code>
@@ -86,6 +87,7 @@ int main() {
   </contentResource>
   <contentResource xsi:type="ImageResource" guid="56712367">
     <url>http://www.cs.ucr.edu/~vahid/vahid06.jpg</url>
+    <caption>Franklin Delano Vahid</caption>
   </contentResource>
 </contentResources>
 </section>
