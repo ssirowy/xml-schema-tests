@@ -91,7 +91,7 @@ class XMLObserver(FileSystemEventHandler):
         schema_root = etree.XML(schema)
         schema = etree.XMLSchema(schema_root)
 
-        chapter_file_name = os.path.join(self.path, 'chapter1.xml')
+        chapter_file_name = os.path.join(self.path, 'chapter1/chapter.xml')
         with open(chapter_file_name, 'r') as chapter_file:
             chapter1 = chapter_file.read()
 
@@ -122,14 +122,14 @@ class XMLObserver(FileSystemEventHandler):
         '''
 
         json_section = None
-        schema_file_name = os.path.join(self.path, 'schema.xsd')
+        schema_file_name = os.path.join(self.path, 'section-schema.xsd')
         with open(schema_file_name, 'r') as schema_file:
             schema = schema_file.read()
 
         schema_root = etree.XML(schema)
         schema = etree.XMLSchema(schema_root)
 
-        section_file_name = os.path.join(self.path, xml_filename)
+        section_file_name = os.path.join(self.path, 'chapter1', xml_filename)
 
         if os.path.isfile(section_file_name):
             with open(section_file_name, 'r') as section_file:
