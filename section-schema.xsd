@@ -36,7 +36,7 @@
     </xs:all>
   </xs:complexType>
   
-  <!-- Content resources array type. --> 
+  <!-- Content resources array type. -->
   <xs:complexType name="ContentResources">
       <xs:sequence>
           <xs:element name="contentResource" type="ContentResource" maxOccurs="unbounded"/>
@@ -84,13 +84,20 @@
   <xs:complexType name="CodeResource">
     <xs:complexContent>
       <xs:extension base="ContentResource">
-          <xs:sequence>
-          <xs:element name="code" type="xs:string"/>
-        </xs:sequence>
-          <xs:attribute ref="language" use="required" />
+        <xs:attribute ref="language" use="required" />
+        <xs:attribute name="file" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="compileCommand">
+          <xs:simpleType>
+            <xs:restriction base="xs:string"/>
+          </xs:simpleType>
+        </xs:attribute>
       </xs:extension>
     </xs:complexContent>
- </xs:complexType>
+  </xs:complexType>
 
   <!-- Image content resource type. -->
   <xs:complexType name="ImageResource">
