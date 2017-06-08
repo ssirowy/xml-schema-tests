@@ -12,21 +12,206 @@
       <text>Added image</text>
     </zypInfo>
   </zypInfos>
-  <title>Section 2</title>
+  <title>A first program</title>
   <contentResources>
     <contentResource xsi:type="TextResource" guid="11345678">
-      Always wear proper eye protection.
+      Below is a simple first C++ program.
+    </contentResource>
+    <contentResource xsi:type="CodeResource" guid="12345678" language="cpp">
+      <code>
+ #include &lt;iostream&gt;
+using namespace std;
 
-      <definition> <term>The simpsons</term> is a show</definition>
+int main() {
+    cout &lt;&lt; "Scott was here";
+}
+      </code>
     </contentResource>
     <contentResource xsi:type="CommentResource" guid="13467789">
       <name>Adrian Lizarraga</name>
       <timestamp>2017-06-07T09:00:00</timestamp>
       <comment>TODO: Finish writing content later</comment>
     </contentResource>
-    <contentResource xsi:type="ImageResource" guid="15e72367">
-      <url>https://goo.gl/kMR3GM</url>
-      <caption>Scott Sirowy the 1st</caption>
+    <contentResource xsi:type="TextResource" guid="45789234">
+        The program consists of several lines of code. <definition><term>Code</term> is the textual representation of a program</definition>. <definition>A <term>line</term> is a row of text.</definition>
+        
+        The program starts by <definition>executing a function called <term>main</term>. </definition>A function is a list of statements.
+        
+        <definition>{ and } are called braces, denoting a list of <term>statements</term></definition>. main's statements appear between braces.
+        
+        Like a baker temporarily stores ingredients on a countertop, a program temporarily stores values in a memory. <definition>A <term>memory</term> is composed of numerous individual locations, each able to store a value</definition>. The statement int wage = 20 reserves a location in memory, names that location wage, and stores the value 20 in that location. A named location in memory, such as wage, is called a variable (because that value can vary).
+        
+        Many code editors color certain words, as in the above program, to assist a human reader understand various words' roles.
+        
+        <definition>A <term>compiler</term> is a tool that converts a program into low-level machine instructions (0s and 1s) understood by a particular computer.</definition> Because a programmer interacts extensively with a compiler, this material frequently refers to the compiler.
+
     </contentResource>
+    
+     <contentResource xsi:type="MultipleChoiceResource" guid="22345679">
+         
+    <question>
+      <text>Textual representation of a program</text>
+      <choice>
+        <correct>false</correct>
+        <label>main</label>
+        <explanation></explanation>
+      </choice>    
+      <choice>
+         <correct>false</correct>
+        <label>Statement</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+          <correct>false</correct>
+          <label>Line</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+       <correct>false</correct>
+       <label>braces</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+       <correct>true</correct>
+       <label>Code</label>
+        <explanation></explanation>
+      </choice>
+       <choice>
+       <correct>false</correct>
+       <label>Compiler</label>
+        <explanation></explanation>
+      </choice>
+       <choice>
+       <correct>false</correct>
+       <label>Variable</label>
+        <explanation></explanation>
+      </choice>
+    </question>
+    
+    
+    <question>
+      <text>Performs a specific action</text>
+      <choice>
+        <correct>false</correct>
+        <label>main</label>
+        <explanation></explanation>
+      </choice>    
+      <choice>
+         <correct>true</correct>
+        <label>Statement</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+          <correct>false</correct>
+          <label>Line</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+       <correct>false</correct>
+       <label>braces</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+       <correct>false</correct>
+       <label>Code</label>
+        <explanation></explanation>
+      </choice>
+       <choice>
+       <correct>false</correct>
+       <label>Compiler</label>
+        <explanation></explanation>
+      </choice>
+       <choice>
+       <correct>false</correct>
+       <label>Variable</label>
+        <explanation></explanation>
+      </choice>
+    </question>
+    
+    
+        <question>
+      <text>A row of text</text>
+      <choice>
+        <correct>false</correct>
+        <label>main</label>
+        <explanation></explanation>
+      </choice>    
+      <choice>
+         <correct>false</correct>
+        <label>Statement</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+          <correct>true</correct>
+          <label>Line</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+       <correct>false</correct>
+       <label>braces</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+       <correct>false</correct>
+       <label>Code</label>
+        <explanation></explanation>
+      </choice>
+       <choice>
+       <correct>false</correct>
+       <label>Compiler</label>
+        <explanation></explanation>
+      </choice>
+       <choice>
+       <correct>false</correct>
+       <label>Variable</label>
+        <explanation></explanation>
+      </choice>
+    </question>
+    
+    
+        <question>
+      <text>Delimits (surrounds) a list of statements.</text>
+      <choice>
+        <correct>false</correct>
+        <label>main</label>
+        <explanation></explanation>
+      </choice>    
+      <choice>
+         <correct>false</correct>
+        <label>Statement</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+          <correct>false</correct>
+          <label>Line</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+       <correct>true</correct>
+       <label>braces</label>
+        <explanation></explanation>
+      </choice>
+      <choice>
+       <correct>false</correct>
+       <label>Code</label>
+        <explanation></explanation>
+      </choice>
+       <choice>
+       <correct>false</correct>
+       <label>Compiler</label>
+        <explanation></explanation>
+      </choice>
+       <choice>
+       <correct>false</correct>
+       <label>Variable</label>
+        <explanation></explanation>
+      </choice>
+    </question>
+
+    
+    
+  </contentResource>
+    
+        
   </contentResources>
 </section>
