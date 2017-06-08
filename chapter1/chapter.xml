@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<chapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="chapter-schema.xsd">
+<chapter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../chapter-schema.xsd">
   <sections>
     <section file="section1/section.xml"/>
     <section file="section2/section.xml"/>

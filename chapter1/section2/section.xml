@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../section-schema.xsd">
   <zypInfos>
     <zypInfo>
       <name>Adrian Lizarraga</name>
@@ -26,6 +26,7 @@
     </contentResource>
     <contentResource xsi:type="ImageResource" guid="15e72367">
       <url>https://goo.gl/kMR3GM</url>
+      <caption>Scott Sirowy the 1st</caption>
     </contentResource>
   </contentResources>
 </section>
