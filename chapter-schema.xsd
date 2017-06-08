@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <!-- Chapter type. A chapter has an array of sections -->
+  <xs:complexType name="Chapter">
+    <xs:choice>
+      <xs:element name="sections" type="Sections" />
+    </xs:choice>
+  </xs:complexType>
+
+  <!-- Sections array type. -->
+  <xs:complexType name="Sections">
+      <xs:sequence>
+          <xs:element name="section" type="Section" maxOccurs="unbounded"/>
+      </xs:sequence>
+  </xs:complexType>
+
+  <!-- Section type. Has a required file attribute specifying the section's XML spec -->
+  <xs:complexType name="Section">
+    <xs:attribute name="file" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string"/>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- XML has a chapter as the root element -->
+  <xs:element name="chapter" type="Chapter"/>
+
+</xs:schema>

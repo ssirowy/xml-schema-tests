@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+  <zypInfos>
+    <zypInfo>
+      <name>Adrian Lizarraga</name>
+      <timestamp>2017-06-07T09:00:00</timestamp>
+      <text>Created new section</text>
+    </zypInfo>
+    <zypInfo>
+      <name>Adrian Lizarraga</name>
+      <timestamp>2017-06-07T09:02:00</timestamp>
+      <text>Added image</text>
+    </zypInfo>
+  </zypInfos>
+  <title>My eyes! The goggles do nothing!</title>
+  <contentResources>
+    <contentResource xsi:type="TextResource" guid="11345678">
+      Always wear proper eye protection.
+
+      <definition> <term>The simpsons</term> is a show</definition>
+    </contentResource>
+    <contentResource xsi:type="CommentResource" guid="13467789">
+      <name>Adrian Lizarraga</name>
+      <timestamp>2017-06-07T09:00:00</timestamp>
+      <comment>TODO: Finish writing content later</comment>
+    </contentResource>
+    <contentResource xsi:type="ImageResource" guid="15e72367">
+      <url>https://goo.gl/kMR3GM</url>
+    </contentResource>
+  </contentResources>
+</section>

@@ -79,8 +79,49 @@ class XMLObserver(FileSystemEventHandler):
         self.path = path
         self.write_path = write_path
 
-    def dispatch(self, event):
+    def parse_chapter(self):
+        '''
+        Returns a list of dictionaries with section xml file names.
+        '''
 
+        schema_file_name = os.path.join(self.path, 'chapter-schema.xsd')
+        with open(schema_file_name, 'r') as schema_file:
+            schema = schema_file.read()
+
+        schema_root = etree.XML(schema)
+        schema = etree.XMLSchema(schema_root)
+
+        chapter_file_name = os.path.join(self.path, 'chapter1.xml')
+        with open(chapter_file_name, 'r') as chapter_file:
+            chapter1 = chapter_file.read()
+
+        parser = etree.XMLParser(schema = schema)
+        sections = []
+
+        try:
+            root = etree.fromstring(chapter1, parser)
+            json_val = xmljson_convention.data(root)
+            json_sections = json_val['chapter']['sections']['section']
+
+            if type(json_sections) is not list:
+                sections.append(json_sections)
+            else:
+                sections.extend(json_sections)
+
+            #print(json.dumps(sections))
+        except etree.XMLSyntaxError, e:
+            print 'ERROR parsing chapter'
+            print e
+            return None
+
+        return sections
+
+    def parse_section(self, xml_filename):
+        '''
+        Validates a section's xml file and returns a JSON representation.
+        '''
+
+        json_section = None
         schema_file_name = os.path.join(self.path, 'schema.xsd')
         with open(schema_file_name, 'r') as schema_file:
             schema = schema_file.read()
@@ -88,24 +129,63 @@ class XMLObserver(FileSystemEventHandler):
         schema_root = etree.XML(schema)
         schema = etree.XMLSchema(schema_root)
 
-        section_file_name = os.path.join(self.path, 'sample-section.xml')
-        with open(section_file_name, 'r') as section_file:
-            sample_section = section_file.read()
+        section_file_name = os.path.join(self.path, xml_filename)
 
-        parser = etree.XMLParser(schema = schema)
+        if os.path.isfile(section_file_name):
+            with open(section_file_name, 'r') as section_file:
+                sample_section = section_file.read()
 
-        try:
-            root = etree.fromstring(sample_section, parser)
+            parser = etree.XMLParser(schema = schema)
 
-            output_str = 'export default function fetchSectionData() { return [ %s ]; }' % json.dumps(xmljson_convention.data(root)['section'])
+            try:
+                root = etree.fromstring(sample_section, parser)
+                json_section = xmljson_convention.data(root)['section']
+
+                #print(json.dumps(json_section))
+            except etree.XMLSyntaxError, e:
+                print 'ERROR parsing section file: %s' %xml_filename
+                print e
+
+                return None
+
+        else:
+            print 'ERROR: file %s does not exist' % xml_filename
+
+        return json_section
+
+    def dispatch(self, event):
+
+        # Get a list of section files from a chapter's xml
+        section_files = self.parse_chapter()
+
+        if not section_files:
+            return
+
+        sections = []
+        error = False
+
+        # Validate each of the section xml files and add corresponding JSON list
+        for section_file in section_files:
+            section = self.parse_section(section_file['@file'].strip())
+
+            if section is not None:
+                sections.append(section)
+            else:
+                error = True
+                break
+
+        # Write data to file
+        if not error:
+            output_str = 'export default function fetchSectionData() { return %s; }' % json.dumps(sections)
             if self.write_path:
                 with open(self.write_path, 'w') as output_file:
                     output_file.write(output_str)
 
-
             print output_str
-        except etree.XMLSyntaxError, e:
-            print 'ERROR'
+
+
+
+
 
 if __name__ == "__main__":
     path = sys.argv[1] if len(sys.argv) > 1 else '.'

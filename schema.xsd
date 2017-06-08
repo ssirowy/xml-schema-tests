@@ -73,7 +73,7 @@
   <xs:complexType name="TextResource" mixed="true">
     <xs:complexContent>
       <xs:extension base="ContentResource">
-        <xs:choice maxOccurs="unbounded">
+        <xs:choice maxOccurs="unbounded" minOccurs="0">
           <xs:element ref="definition"/>
         </xs:choice>
       </xs:extension>
