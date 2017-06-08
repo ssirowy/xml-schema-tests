@@ -30,7 +30,7 @@
      <definition><term>Programming</term> is defined as tinkering with stuff </definition>
 
      Here is yet another line of text. <definition>Here is another <term>definition</term></definition>
-
+     
      <definition> <term>Skiiing</term> is a winter sport</definition>
 </contentResource>
 <contentResource xsi:type="CommentResource" guid="34467789">
@@ -60,7 +60,7 @@ int main() {
         <explanation>The world  is not flat...  Are u sure?</explanation>
       </choice>
       <choice>
-        <correct>false</correct>
+        <correct>true</correct>
         <label>Round</label>
         <explanation>The world is round.</explanation>
       </choice>
