@@ -37,7 +37,6 @@
     
     Newlines are respected in source, which helps to remove the need for tags like br
     </contentResource>
-  <contentResource xsi:type="CodeResource" guid="12345678" language="cpp" file="main.cpp"/>
   <contentResource xsi:type="MultipleChoiceResource" guid="22345679">
     <question>
       <text>What is the approximate shape of the planet Earth?</text>
