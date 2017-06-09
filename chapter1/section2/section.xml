@@ -22,7 +22,7 @@
       <text>Showing Bert a demo</text>
     </zypInfo>
   </zypInfos>
-  <title>A first program - Bert demo</title>
+  <title>A first program</title>
   <contentResources>
     <contentResource xsi:type="TextResource" guid="11345678">
       Below is a simple first C++ program.
@@ -35,7 +35,6 @@
     </contentResource>
     <contentResource xsi:type="TextResource" guid="45789234">
         
-        Scott was here.
       The program consists of several lines of code. <definition><term>Code</term> is the textual representation of a program</definition>. <definition>A <term>line</term> is a row of text.</definition>
 
       The program starts by <definition>executing a function called <term>main</term>. </definition>A function is a list of statements.
