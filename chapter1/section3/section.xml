@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../section-schema.xsd">
+  <zypInfos>
+    <zypInfo>
+      <name>Adrian Lizarraga</name>
+      <timestamp>2017-06-07T09:00:00</timestamp>
+      <text>Created new section</text>
+    </zypInfo>
+  </zypInfos>
+  <title>Basic output</title>
+  <contentResources>
+    <contentResource xsi:type="TextResource" guid="11345678">
+      Printing of output to a screen is a common programming task. This section describes basic output; later sections have more details.
+    </contentResource>
+    <contentResource xsi:type="CodeResource" guid="12345678" language="cpp" file="main.cpp"/>
+  </contentResources>
+</section>
