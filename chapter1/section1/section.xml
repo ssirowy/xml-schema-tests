@@ -1,78 +1,78 @@
 <?xml version="1.0"?>
 <section xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../section-schema.xsd">
   <zypInfos>
-      <zypInfo>
-          <name>Scott Sirowy</name>
-          <timestamp>2017-06-01T09:00:00</timestamp>
-          <text>Worked on schema for 5 minutes</text>
-      </zypInfo>
-      <zypInfo>
-          <name>Adrian Lizarraga</name>
-          <timestamp>2017-06-01T09:00:00</timestamp>
-          <text>Worked on schema some more</text>
-      </zypInfo>
-      <zypInfo>
-          <name>Scott Sirowy</name>
-          <timestamp>2017-06-06T09:00:00</timestamp>
-          <text>Worked on demo styling</text>
-      </zypInfo>
-            <zypInfo>
-          <name>Scott Sirowy</name>
-          <timestamp>2017-06-06T09:00:00</timestamp>
-          <text>Got comments to work</text>
-      </zypInfo>
+    <zypInfo>
+      <name>Scott Sirowy</name>
+      <timestamp>2017-06-01T09:00:00</timestamp>
+      <text>Worked on schema for 5 minutes</text>
+    </zypInfo>
+    <zypInfo>
+      <name>Adrian Lizarraga</name>
+      <timestamp>2017-06-01T09:00:00</timestamp>
+      <text>Worked on schema some more</text>
+    </zypInfo>
+    <zypInfo>
+      <name>Scott Sirowy</name>
+      <timestamp>2017-06-06T09:00:00</timestamp>
+      <text>Worked on demo styling</text>
+    </zypInfo>
+    <zypInfo>
+      <name>Scott Sirowy</name>
+      <timestamp>2017-06-06T09:00:00</timestamp>
+      <text>Got comments to work</text>
+    </zypInfo>
   </zypInfos>
-   <title>Programming </title>
- <contentResources>
-   <contentResource xsi:type="TextResource" guid="12345678">
-     A recipe consists of instructions that a chef executes, like adding eggs or stirring ingredients. Likewise, <definition>a <term>computer program</term> consists of instructions that a computer executes (or runs), like multiplying numbers or printing a number to a screen.</definition>
-</contentResource>
-   <contentResource xsi:type="ImageResource" guid="5e712367">
-    <url>https://zytools.zybooks.com/zyAuthor/ProgInCCppJava/50/IMAGES/embedded_image01spZA9RiRIvVsll3GwWFwLQKCCAATWbs3N9sVBcgs8dg_10_bTiqgzpCFQ.png</url>
-    <caption>A  program is like a recipe</caption>
-  </contentResource>
-  <contentResource xsi:type="TextResource" guid="12345678">
-    <definition><term>Code</term> can be defined easily using new setup.</definition>.   See below for an accessible code block.  Note this code
-    was defined in its own file, which could even allow us to compile such code before ever processing to ensure the code can actually run.
-    
-    Newlines are respected in source, which helps to remove the need for tags like br
+  <title>Programming </title>
+  <contentResources>
+    <contentResource xsi:type="TextResource" guid="12345678">
+      A recipe consists of instructions that a chef executes, like adding eggs or stirring ingredients. Likewise, <definition>a <term>computer program</term> consists of instructions that a computer executes (or runs), like multiplying numbers or printing a number to a screen.</definition>
     </contentResource>
-  <contentResource xsi:type="MultipleChoiceResource" guid="22345679">
-    <question>
-      <text>What is the approximate shape of the planet Earth?</text>
-      <choice>
-        <correct>false</correct>
-        <label>Flat</label>
-        <explanation>The world  is not flat...  Are u sure?</explanation>
-      </choice>
-      <choice>
-        <correct>true</correct>
-        <label>Round</label>
-        <explanation>The world is round.</explanation>
-      </choice>
-    </question>
-    <question>
-      <text>What is 2 + 2?</text>
-      <choice>
-        <correct>true</correct>
-        <label>4</label>
-        <explanation>Yeah it's 4.</explanation>
-      </choice>
-      <choice>
-        <correct>false</correct>
-        <label>5</label>
-        <explanation>Nope. Try using your fingers to count.</explanation>
-      </choice>
-    </question>
-  </contentResource>
-   <contentResource xsi:type="CommentResource" guid="34567789">
-    <name>Scott Sirowy</name>
-    <timestamp>2017-05-30T09:00:00</timestamp>
-    <comment>Sample comment</comment>
-  </contentResource>
-  <contentResource xsi:type="ImageResource" guid="56712367">
-    <url>http://www.cs.ucr.edu/~vahid/vahid06.jpg</url>
-    <caption>Franklin Delano Vahid</caption>
-  </contentResource>
-</contentResources>
+    <contentResource xsi:type="ImageResource" guid="5e712367">
+      <url>https://zytools.zybooks.com/zyAuthor/ProgInCCppJava/50/IMAGES/embedded_image01spZA9RiRIvVsll3GwWFwLQKCCAATWbs3N9sVBcgs8dg_10_bTiqgzpCFQ.png</url>
+      <caption>A  program is like a recipe</caption>
+    </contentResource>
+    <contentResource xsi:type="TextResource" guid="12345678">
+      <definition><term>Code</term> can be defined easily using new setup.</definition>.   See below for an accessible code block.  Note this code
+      was defined in its own file, which could even allow us to compile such code before ever processing to ensure the code can actually run.
+      
+      Newlines are respected in source, which helps to remove the need for tags like br
+    </contentResource>
+    <contentResource xsi:type="MultipleChoiceResource" guid="22345679">
+      <question>
+        <text>What is the approximate shape of the planet Earth?</text>
+        <choice>
+          <correct>false</correct>
+          <label>Flat</label>
+          <explanation>The world  is not flat...  Are u sure?</explanation>
+        </choice>
+        <choice>
+          <correct>true</correct>
+          <label>Round</label>
+          <explanation>The world is round.</explanation>
+        </choice>
+      </question>
+      <question>
+        <text>What is 2 + 2?</text>
+        <choice>
+          <correct>true</correct>
+          <label>4</label>
+          <explanation>Yeah it's 4.</explanation>
+        </choice>
+        <choice>
+          <correct>false</correct>
+          <label>5</label>
+          <explanation>Nope. Try using your fingers to count.</explanation>
+        </choice>
+      </question>
+    </contentResource>
+    <contentResource xsi:type="CommentResource" guid="34567789">
+      <name>Scott Sirowy</name>
+      <timestamp>2017-05-30T09:00:00</timestamp>
+      <comment>Sample comment</comment>
+    </contentResource>
+    <contentResource xsi:type="ImageResource" guid="56712367">
+      <url>http://www.cs.ucr.edu/~vahid/vahid06.jpg</url>
+      <caption>Franklin Delano Vahid</caption>
+    </contentResource>
+  </contentResources>
 </section>

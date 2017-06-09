@@ -1,31 +1,31 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<!-- All supported languages, defined as an attribute -->
-<xs:attribute name="language">
+  <!-- All supported languages, defined as an attribute -->
+  <xs:attribute name="language">
     <xs:simpleType>
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="cpp"/>
-            <xs:enumeration value="c"/>
-            <xs:enumeration value="java"/>
-            <xs:enumeration value="python"/>
-        </xs:restriction>
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="cpp"/>
+        <xs:enumeration value="c"/>
+        <xs:enumeration value="java"/>
+        <xs:enumeration value="python"/>
+      </xs:restriction>
     </xs:simpleType>
-</xs:attribute>
+  </xs:attribute>
 
-<xs:attribute name="guid">
+  <xs:attribute name="guid">
     <xs:simpleType>
-                <xs:restriction base="xs:string">
-            <xs:pattern value="[a-zA-Z0-9]{8}"/>
-        </xs:restriction>
+      <xs:restriction base="xs:string">
+        <xs:pattern value="[a-zA-Z0-9]{8}"/>
+      </xs:restriction>
     </xs:simpleType>
-</xs:attribute>
- 
- <xs:complexType name="definitiontype" mixed="true">
-     <xs:sequence>
-         <xs:element ref="term"/>
-      </xs:sequence>
- </xs:complexType>
+  </xs:attribute>
+  
+  <xs:complexType name="definitiontype" mixed="true">
+    <xs:sequence>
+      <xs:element ref="term"/>
+    </xs:sequence>
+  </xs:complexType>
 
   <!-- Section type. A section has a set of properties -->
   <xs:complexType name="Section">
@@ -38,25 +38,25 @@
   
   <!-- Content resources array type. -->
   <xs:complexType name="ContentResources">
-      <xs:sequence>
-          <xs:element name="contentResource" type="ContentResource" maxOccurs="unbounded"/>
-      </xs:sequence>
- </xs:complexType>
+    <xs:sequence>
+      <xs:element name="contentResource" type="ContentResource" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
   
- <!-- Array of zypInfos array type -->
- <xs:complexType name="ZypInfos">
+  <!-- Array of zypInfos array type -->
+  <xs:complexType name="ZypInfos">
     <xs:sequence>
       <xs:element name="zypInfo" type="ZypInfo" minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
   
   <!-- zypInfo type -->
-    <xs:complexType name="ZypInfo">
-        <xs:all>
-          <xs:element name="name" type="xs:string"/>
-          <xs:element name="timestamp" type="xs:dateTime"/>
-          <xs:element name="text" type="xs:string"/>
-        </xs:all>
+  <xs:complexType name="ZypInfo">
+    <xs:all>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="timestamp" type="xs:dateTime"/>
+      <xs:element name="text" type="xs:string"/>
+    </xs:all>
   </xs:complexType>
 
   <!-- Content resource type (Abstract). -->
@@ -66,8 +66,8 @@
   </xs:complexType>
 
   <!-- Support marks for mixed content text regions -->
-<xs:element name="term" type="xs:string"/>
-<xs:element name='definition' type='definitiontype' />
+  <xs:element name="term" type="xs:string"/>
+  <xs:element name='definition' type='definitiontype' />
 
   <!-- Text content resource type. -->
   <xs:complexType name="TextResource" mixed="true">
@@ -122,7 +122,7 @@
     </xs:complexContent>
   </xs:complexType>
   
-    <!-- Comment  resource type. -->
+  <!-- Comment  resource type. -->
   <xs:complexType name="CommentResource">
     <xs:complexContent>
       <xs:extension base="ContentResource">
